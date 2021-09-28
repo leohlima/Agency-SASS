@@ -1,0 +1,258 @@
+@import 'placeholder'
+@import 'variables'
+
+
+
+//1. ESTILOS GERAIS//
+//2. HEADER//
+//3. MAIN-BANNER//
+//4. SERVIÇOS//
+//5. TRABALHOS//
+//6.FOOTER//
+
+
+body
+    @extend %reset-and-font
+
+.center-img
+    @extend %center-img
+
+header, .logo, ul
+    @extend %flex_horizontal-and-align
+
+//2. HEADER// 
+
+.header
+    justify-content: space-between
+    background-color: $secondary-color
+    position: fixed
+    width: 100%
+    flex-wrap: wrap
+    padding: 0 10px
+
+ul
+    @extend %ul
+
+.nav-header__itens
+    margin: 0 5px
+    color: $white-font
+
+.logo
+    color: $white-font
+    transition: .5s
+    cursor: pointer
+    .logo-name
+        font-size: 2rem
+        font-weight: 300
+    i
+        margin-right: 5px
+        font-size: 2rem
+    &:hover
+        color: $primary-color
+
+a
+    @extend %a
+    &:hover
+        color: $primary-color
+
+.nav-header__ul
+    margin-right: 40px
+
+.btn-header, .main-btn
+    @extend %pattern-btn
+
+#btn-header__register
+    background-color: $secondary-color
+    border: 1px solid white
+
+.fa-bars
+    color: $primary-color
+    font-size: 2rem
+    margin-right: 30px
+    overflow: hidden
+    position: absolute
+    left: -50px
+
+//3. MAIN BANNER//
+
+.main-banner__img
+    background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../assets/office.jpg')
+    background-size: cover
+    background-position: center
+    width: 100%
+    height: 790px
+    @extend %flex_horizontal-and-align
+    @extend %center-img
+    flex-direction: column
+    justify-content: center
+
+h1
+    color: $white-font
+    font-size: 3.5rem
+    text-align: center
+    font-weight: 400
+
+.main-btn
+    padding: 20px
+    border-radius: 30px
+    &:hover
+        background: rgba(0,0,0,0.5)
+
+//4. SERVIÇOS//
+
+.section-title
+    text-align: center
+    font-size: 3rem
+    font-weight: 500
+    margin-top: 80px
+
+.container-cards
+    display: flex
+    margin: 0 auto
+    padding: 0 30px
+    max-width: 1500px
+    justify-content: center
+
+.cards
+    @extend %cards-pattern
+    &:hover
+        @extend %hover-shadow
+
+.servicos-btn
+    text-align: center
+    margin-top: 20px
+    margin-bottom: 50px
+    .main-btn:hover
+        background-color: white
+
+//5. TRABALHOS//
+
+.job-galery__img2, .job-galery__img3, .job-galery__img4, .job-galery__img5, .job-galery__img1
+    @extend %size-row-jobs
+    &:hover
+        @extend %hover-shadow
+
+#trabalhos
+    @extend %trabalhos-pattern
+
+.job-galery
+    @extend %job-galery
+
+.job-galery__img1
+    @extend %job-galery__img1
+
+.job-galery-row
+    @extend %job-galery-row
+    margin-top: 10px
+
+.job-galery__img2
+    background-image: url(../assets/job2.jpg)
+    &:hover
+        background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job2.jpg)
+        background-position: center
+        background-size: cover
+
+.job-galery__img2, .job-galery__img4
+    margin-bottom: 10px
+
+.job-galery__img3
+    background-image: url(../assets/job3.jpg)
+    &:hover
+        background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job3.jpg)
+        background-position: center
+        background-size: cover
+
+.job-galery__img4
+    background-image: url(../assets/job4.jpg)
+    &:hover
+        background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job4.jpg)
+        background-position: center
+        background-size: cover
+
+.job-galery__img5
+    background-image: url(../assets/job5.jpg)
+    &:hover
+        background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job5.jpg)
+        background-position: center
+        background-size: cover
+
+#contato
+    font-size: 2rem
+    text-align: center
+    padding: 10px
+    p
+        margin: 0
+        color: white
+    a
+        font-weight: bold
+        color: white
+        transition: .5s
+        color: $primary-color
+            
+
+//6. FOOTER//
+
+footer
+    background-color: black
+
+//7. MEDIA-QUERY//
+
+@media ( max-width: 858px )
+    .container-cards
+        flex-wrap: wrap
+
+@media ( max-width: 636px )
+    .job-galery-row
+        flex-wrap: wrap
+        justify-content: center
+        width: 100%
+
+    #trabalhos
+        .section-title
+            display: inline-block
+            &::after
+                content: '(Clique nas fotos para mais detalhes)'
+                font-size: 1rem
+
+    .job-galery__img1
+        background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job1.jpg)
+        background-position: center
+        background-size: cover
+
+    .job-galery__img2, .job-galery__img3, .job-galery__img4, .job-galery__img5
+        width: 400px
+        background-position: center
+        background-size: cover
+        padding: 10px 10px
+
+        .job-galery__img2
+            background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job2.jpg)
+
+        .job-galery__img3
+            background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job3.jpg)
+
+        .job-galery__img4
+            background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job4.jpg)
+
+        .job-galery__img5
+            background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job5.jpg)
+
+@media ( max-width: 609px )
+    .header
+        justify-content: center
+
+@media ( max-width: 522px )
+    .job-galery-row
+        flex-wrap: wrap
+        justify-content: center
+
+@media ( max-width: 430px )
+    .nav-header
+        display: none
+
+    .header
+        justify-content: space-between
+
+    .fa-bars
+        position: relative
+        left: 10px

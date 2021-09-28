@@ -1,0 +1,118 @@
+@import 'variables'
+
+%reset-and-font
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+%flex_horizontal-and-align
+    display: flex
+    align-items: center
+
+%flex-vertical-and-align
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+%ul
+    list-style: none
+
+%hover-btn
+    background-color: $secondary-color
+    color: $primary-color
+    border: 1px solid $primary-color
+
+%pattern-btn
+    padding: 10px
+    background-color: $primary-color
+    color: $white-font
+    border-radius: 3px
+    outline: none
+    border: none
+    cursor: pointer
+    transition: .5s
+    &:hover
+        @extend %hover-btn
+
+%a
+    text-decoration: none
+    transition: .5s
+    color: $white-font
+
+%center-img
+    background-position: center
+    background-size: cover
+
+%cards-pattern
+    padding: 20px
+    flex-shrink: 2
+    @extend %flex-vertical-and-align
+    border: 1px solid $terciary-color
+    width: 420px
+    margin: 10px 20px
+    transition: .5s
+    .simbol
+        font-size: 3rem
+        color: $primary-color
+    .card-title
+        font-size: 1.7rem
+        text-align: center
+    .card-description
+        text-align: center
+        color: $terciary-color-darker
+
+%hover-shadow
+    border: none
+    box-shadow: -1px -1px 10px 6px rgba(0, 0, 0, 0.2)
+
+%trabalhos-pattern
+    background-color: #C9CCD5
+    padding: 30px
+    h2
+        margin-bottom: 15px
+
+%job-galery
+    justify-content: center
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    
+    h2, p
+        color: white
+
+    %job-galery__img1
+        background-image: url(../assets/job1.jpg)
+        height: 400px
+        width: 500px
+        padding: 0 10px
+        text-align: center
+        &:hover
+            background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../assets/job1.jpg)
+            background-position: center
+            background-size: cover
+     
+.job-galery__img2
+    margin-bottom: 10px
+
+%job-galery-row
+    @extend %flex_horizontal-and-align
+   
+
+
+%size-row-jobs
+    height: 190px
+    width: 300px
+    margin: 0 10px
+    text-align: center
+    cursor: pointer
+    transition: .5s
+    h2, p
+        display: none
+    &:hover
+        h2, p
+            display: block
+            
+     
+
