@@ -316,7 +316,7 @@ footer {
   }
 
   .job-galery__img2, .job-galery__img3, .job-galery__img4, .job-galery__img5 {
-    width: 400px;
+    width: 300px;
     background-position: center;
     background-size: cover;
     padding: 10px 10px;
@@ -345,7 +345,7 @@ footer {
     justify-content: center;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   .nav-header {
     display: none;
   }
@@ -357,6 +357,19 @@ footer {
   .fa-bars {
     position: relative;
     left: 10px;
+  }
+
+  .job-galery__img2, .job-galery__img3, .job-galery__img4, .job-galery__img5 {
+    width: 200px;
+  }
+
+  #h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 340px) {
+  #h1 {
+    font-size: 2.5rem;
   }
 }
 
